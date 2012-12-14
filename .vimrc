@@ -44,12 +44,6 @@ set showcmd
 " Folding
 set foldmethod=marker
 
-" Syntax highlighting & more
-filetype on
-filetype plugin on
-syntax on
-set grepprg=grep\ -nH\ $*
-
 " Indentation & tabs
 set autoindent
 set expandtab
@@ -65,6 +59,12 @@ set nowrap
 set fo-=t
 set colorcolumn=80
 highlight ColorColumn ctermbg=250
+
+" Syntax highlighting & more
+filetype on
+filetype plugin on
+syntax on
+set grepprg=grep\ -nH\ $*
 
 " English when spellchecking is enabled
 if version >= 700
