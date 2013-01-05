@@ -57,8 +57,6 @@ set softtabstop=4
 set tw=79
 set nowrap
 set fo-=t
-set colorcolumn=80
-highlight ColorColumn ctermbg=250
 
 " Syntax highlighting & more
 filetype on
@@ -121,11 +119,11 @@ set noswapfile
 
 "{{{Appearance
 if has("gui_running") || &t_Co == 256
-    colorscheme jellybeans
+    colorscheme ir_black
     set guioptions-=T
-    set guifont=Inconsolata\ 10
+    set guifont=Inconsolata\ 11
 else
-    colorscheme jellybeans
+    colorscheme ir_black
 endif
 
 " Status line
@@ -208,6 +206,8 @@ call pathogen#infect()
 call pathogen#helptags()
 "}}}
 
+let g:XtermColorTableDefaultOpen = 'split'
+let python_highlight_all = 1
 let g:rct_completion_use_fri = 1
 let g:Tex_ViewRule_pdf = "xpdf"
 

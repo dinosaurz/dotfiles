@@ -6,14 +6,16 @@
 [[ $- != *i* ]] && return
 
 # aliases made by myself
-alias shutdown="sudo shutdown -h 10s"
+alias shutdown="sudo shutdown -h 0"
 alias scrot="scrot -d3 `date +"%F"`.jpg"
 alias mkinstall="sudo make clean install"
 alias gitreset="git reset --hard"
 alias pacmani="sudo pacman -Syu"
+alias pacmanu="sudo pacman -Sy"
 alias pacmanr="sudo pacman -Rns"
-alias tarxgz="tar -xzf"
-alias tarxbz="tar -xjf"
+alias pacmans="sudo pacman -Ss"
+alias tarxg="tar -xzf"
+alias tarxb="tar -xjf"
 alias rootlol="sudo !!"
 alias ping="ping -c 5"
 alias cdb="cd -"

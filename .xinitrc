@@ -3,6 +3,7 @@
 #	https://raw.github.com/kaihendry/Kai-s--HOME/master/.xinitrc
 #
 # for terminus font in Archlinux :(
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
@@ -22,15 +23,12 @@ eval `/usr/bin/ssh-agent`
 # # 1280x720 = 720p X220
 # hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(date +%Y-%m-%dT%H).jpg &
 
-feh --bg-tile ~/Pictures/archwall.png
+feh --bg-tile ~/Pictures/st-04_1335345107.jpg
 xrdb -merge $HOME/.Xresources
 xmodmap ~/.Xmodmap
 setxkbmap -layout colemak -option ctrl:nocaps
 
 # status bar
-while true; do
-   xsetroot -name "$(date +"%F %R")"
-   sleep 10s
-done &
+~/bin/dwmstatus &
 
 ~/bin/startdwm
